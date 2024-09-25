@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí nhận tin</title>
+</head>
+<body>
+    <h1>Đăng kí nhận tin</h1>
+    <form action="/dangky.php"></form> <!-- form xu ly--> <!--Methor Post tạo 1 request riêng gửi về sever, Post dùng trực tiếp URL ngăn cách bằng dấu ? -->
+    <fieldset>
+        <legend>Gửi thông tin của bạn cho chúng tôi</legend> <!-- Tiêu đề cho fieldset như groupbox-->
+        <p>Đăng ký để nhận được các thông tin định kì về giá nông sản</p>
+        <ol> <!-- chứa control-->
+
+            <li><label for="ho-ten">Tên:</label> <!--Tạo Label hoten-->
+    
+              <input type="text" name="ten" id="ho-ten"></li> <!--Nhap vao o giong text box-->
+    
+            <li><label for="email">Email:</label>
+    
+              <input type="text" name="email" id="email"></li>
+    
+          </ol>
+    
+          <input type="submit" value="Đăng ký"> <!--btnSubmit--> 
+    
+        </fieldset>
+        <textarea name="nhan-xet" rows="4" cols="45" placeholder="Để lại nhận xét của bạn tại đây!"></textarea>
+        <fieldset>
+            <label>Tỉnh/Thành phố: <input type="text" name="city" id="form-city"
+
+                value="Đà Lạt" maxlength="50"></label>
+        </fieldset>
+        <fieldset>
+            <form action="" method="get">
+
+                <p><label>Nhận xét của bạn về cuốn sách:<br>
+            
+                  <em>Cho chúng tôi biết cảm nhận của bạn về cuốn sách này, đây sẽ là những thông tin rất có ích đối với Nhà xuất bản, tác giả và các độc giả khác</em><br>
+                        <!--em biểu thị thông tin cần chú ý-->
+                  <textarea name="nhan-xet" cols="30" rows="10">Cuốn sách rất có ích cho sinh viên</textarea></label></p>
+            
+            </form>
+        </fieldset>
+        <form action="" method="get">
+
+            <p><label>Nhận xét của bạn về cuốn sách:<br>
+      
+            <em>Cho chúng tôi biết cảm nhận của bạn về cuốn sách này, đây sẽ là những thông tin rất có ích đối với Nhà xuất bản, tác giả và các độc giả khác</em><br>
+      
+            <textarea name="nhan-xet" cols="30" rows="10" placeholder="Nhận xét không quá 50 từ"></textarea></label></p><!--khi người dùng nhập đoạn thông báo sẽ mất-->
+      
+      </form>
+        <p> <label for="form-mat-khau">Mật khẩu:</label>
+
+            <input type="password" name="mat-khau" maxlength="8" id="form-mat-khau"></p>
+      </form>
+      <form action="" method="get">
+
+        <label for="form-sach">
+  
+          Các cuốn sách bạn đã đọc khi là sinh viên:
+  
+          <input type="text" list="sach" id="form-sach">
+  
+          <datalist id="sach"> <!--Kiểu như combobox nhưng tiện lợi hơn rất nhiều-->
+  
+            <option value="Khuyến học"></option>
+  
+            <option value="Đúng việc"></option>
+  
+            <option value="Khởi hành"></option>
+  
+            <option value="Trên đường băng"></option>
+  
+            <option value="Nhà giả kim"></option>
+  
+          </datalist>
+  
+        </label>
+        <br>
+        <input type="submit" value="Đăng nhập"> <br>
+
+        <input type="reset" value="Làm lại"><br>
+        <input type="image" src="C:\Users\PC602\Downloads\feedback.png" alt="Submit" width="48" height="48">
+        <input type="button" value="Nút bấm">
+        <button>Nút bấm</button>
+
+        <fieldset>
+
+            <legend>Bạn bao nhiêu tuổi?</legend>
+      
+            <ol>
+      
+              <li><label><input type="radio" name="tuoi" value="duoi24" checked> dưới
+      
+              24</label></li>
+      
+              <li><label><input type="radio" name="tuoi" value="25-34"> 25 tới 34</label></li>
+      
+              <li><label><input type="radio" name="tuoi" value="35-44"> 35 tới 44</label></li>
+      
+              <li><label><input type="radio" name="tuoi" value="tren45"> 45+</label></li>
+      
+            </ol>        
+      
+          </fieldset>
+
+          <fieldset>
+
+            <legend>Thói quen đọc của bạn là gì?</legend>
+      
+            <ol>
+      
+              <li><label><input type="checkbox" name="nguon" value="sach-giay" checked> sách giấy</label></li>
+      
+              <li><label><input type="checkbox" name="nguon" value="ebook" checked> sách điện tử</label></li>
+      
+              <li><label><input type="checkbox" name="nguon" value="mang-xa-hoi"> mạng xã hội</label></li>
+      
+              <li><label><input type="checkbox" name="nguon" value="nghe-doc"> nghe người khác đọc</label></li>
+      
+            </ol>
+      
+          </fieldset>
+      
+      Tất nhiên, checkbox không nhất thiết phải sử dụng theo nhóm, mà có thể dùng nó một mình. Ví dụ,
+      
+          <fieldset>
+      
+            <legend>Bạn có muốn nhận thông báo khi có sách mới?</legend>
+      
+            <ol>
+      
+              <li><label><input type="checkbox" name="thong-bao" value="co"> có, đồng ý nhận thông báo vào hộp thư</label></li>
+      
+            </ol>
+      
+          </fieldset>
+
+          <p>Trong các quyển sách sau, bạn thích quyển nào nhất?
+
+            <select name="thich-nhat">
+        
+              <option value=“khuyen-hoc”>Khuyến học</option> <!--y chang combobox-->
+        
+              <option>Đúng việc</option>
+        
+              <option>Khởi hành</option>
+        
+              <option>Trên đường băng</option>
+        
+              <option>Nhà giả kim</option>
+        
+            </select></p>
+
+            <p>Trong các quyển sách sau, bạn thích quyển nào?
+
+                <select name="thich-nhat" size="1" multiple>
+            
+                  <option>Khuyến học</option>
+            
+                  <option selected>Đúng việc</option> <!-- hiển thị kiểu list box có thanh scroll-->
+            
+                  <option selected>Khởi hành</option>
+            
+                  <option>Trên đường băng</option>
+            
+                  <option>Nhà giả kim</option>
+            
+                </select></p>
+
+                <p>Trong các quyển sách sau, bạn thích quyển nào?
+
+                    <select name="thich-nhat" size="5" multiple>
+              
+                      <optgroup label="Sách dịch">
+              
+                        <option>Khuyến học</option>
+              
+                        <option selected>Khởi hành</option>
+              
+                        <option>Nhà giả kim</option>
+              
+                      </optgroup>
+              
+                      <optgroup label="Sách Việt">
+              
+                        <option>Trên đường băng</option>
+              
+                        <option selected>Đúng việc</option>
+              
+                      </optgroup>
+              
+                    </select></p>
+    </form>
+    <form action="/client.php" method="POST" enctype="multipart/form-data">
+
+        <label>Gửi ảnh đại diện của bạn
+    
+          <em>(tùy chọn)</em><br>
+    
+          <input type="file" name="photo" size="28"></label>
+    <p><input type="hidden" name="step" value="1"></p>
+    </form>
+    <ol>
+        <li><input type="date" name="ngay-dat-ve" value="2023-02-17"></li>
+        <li><input type="time" name="gio-dat-ve" value="10:53:30"></li>
+        <li><input type="datetime-local" name="ngay-gio-dat-ve" value="2023-02-17T13:54:02"></li>
+        <li><input type="month" name="thang" value="2023-02"></li>
+        <li><input type="week" name="tuan"></li>
+    </ol>
+    <P><label>Số sách bạn đã đọc: <input type="number" name="so-luong" min="0" max="1000"></label></P>
+    <p><label>Mức độ hài lòng (0 tới 10): <input type="range" name="hai-long" min="0" max="10" step=".5"></label></p>
+</body>
+</html>
